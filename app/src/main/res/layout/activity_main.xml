@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_xlight"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.android.daniel.challengeteam.activity.MainActivity">
+
+    <include
+        android:id="@+id/top_toolbar"
+        layout="@layout/toolbar_top" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spn_videogame"
+            android:entries="@array/array_video_games"
+            android:spinnerMode="dialog" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spn_game"
+            android:spinnerMode="dialog"
+            android:entries="@array/array_games"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spn_coins_bet"
+            android:spinnerMode="dialog"
+            android:entries="@array/array_coins"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_fiber_new_white_24dp"
+        app:borderWidth="2dp"
+        app:fabSize="normal"
+        app:rippleColor="#222"
+        app:backgroundTint="@color/accent" />
+
+
+
+</LinearLayout>
